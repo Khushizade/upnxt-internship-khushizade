@@ -1,4 +1,7 @@
 /* GLOBAL */
+html {
+    scroll-behavior: smooth;
+}
 
 * {
     margin: 0;
@@ -242,3 +245,68 @@ footer {
         font-size: 2rem;
     }
 }
+/* ================= DARK MODE ================= */
+
+.dark-mode {
+    background-color: #111;
+    color: #eee;
+}
+
+.dark-mode header,
+.dark-mode footer {
+    background-color: #000;
+}
+
+.dark-mode .card,
+.dark-mode .testimonial {
+    background-color: #222;
+    color: #fff;
+}
+
+.dark-mode .bg-light {
+    background-color: #1a1a1a;
+}
+/* ================= SCROLL ANIMATION ================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+/* MOBILE */
+
+@media(max-width: 768px) {
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #0d3b66;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        padding: 20px;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+
